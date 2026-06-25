@@ -11,6 +11,9 @@ The lab collects system logs, visualizes activity, and detects suspicious SSH lo
 
 [System Logs] → Promtail → Loki → Grafana
 
+### Rational for Architecture
+The architecture for this log monitoring pipeline had to be lightweight due to resources contstraints of the machine I am running the server on. I choose Promtail and Loki because they are both lightweight and are made to be integrated with one another. I used Granafa because it makes it easy to set up and visualize the logs. I deployed everything with Docker to avoid single points of failure and so that the project is easily reproducible.
+
 ---
 
 ## Technologies Used
