@@ -31,6 +31,10 @@ The lab collects system logs, visualizes activity, and detects suspicious SSH lo
 
 ---
 
+## Future Features
+- Analysis of Brute force SSH login attempts
+- integration of Suricata
+
 ## Setup
 
 ### 1. Install Docker
