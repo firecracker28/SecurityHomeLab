@@ -7,12 +7,12 @@ pipelines to a dashboard set up through Grafana.
 
 ---
 ## Technologies Used
-Hydra
-Powershell
-Loki
-Grafana
-Promtail
-Powershell
+- Hydra
+- Powershell
+- Loki
+- Grafana
+- Promtail
+- Powershell
 
 ## Hydra Command
 `hydra -L fakeuser -P passwords.txt "SERVER-IP" -t 250`
