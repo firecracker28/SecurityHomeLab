@@ -9,10 +9,10 @@ The lab collects system logs, visualizes activity, and detects suspicious SSH lo
 
 ## Architecture
 
-[System Logs] → Promtail → Loki → Grafana
+[System Logs] → Victoria Logs → Vector → Grafana
 
 ### Rational for Architecture
-The architecture for this log monitoring pipeline had to be lightweight due to resources contstraints of the machine I am running the server on. I choose Promtail and Loki because they are both lightweight and are made to be integrated with one another. I used Granafa because it makes it easy to set up and visualize the logs. I deployed everything with Docker to avoid single points of failure and so that the project is easily reproducible.
+The architecture for this log monitoring pipeline had to be lightweight due to resources constraints of the machine I am running the server on. I choose Victoria Logs and Vector because they are both lightweight and are made to be integrated with one another. I used Grafana because it makes it easy to set up and visualize the logs. I deployed everything with Docker to avoid single points of failure and so that the project is easily reproducible.
 
 ---
 
@@ -20,26 +20,19 @@ The architecture for this log monitoring pipeline had to be lightweight due to r
 - Debian 12 (headless server)
 - Docker & Docker Compose
 - Grafana
-- Loki
-- Promtail
+- Vector
+- Victoria Logs
 - systemd journal
+- Falco
 
 ---
 
 ## Features
-- SSH log monitoring
-- Detection of failed login attempts
-- Identification of attacking IP addresses
-- Visualization of authentication activity
+- Logging and visualization for ssh logs and falco alert logs
+- Simple docker container for investigating
 
 ---
 
-## Future Features
-- Analysis of Brute force SSH login attempts
-- integration of Suricata
+## Current Investigation
+- What are containers and how do they really work. See containers folder for report
 
-## Setup
-
-### 1. Install Docker
-```bash
-sudo apt install docker.io docker-compose
