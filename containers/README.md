@@ -5,6 +5,7 @@ In the modern software development, containers are crucial in deploying, scaling
 
 ## Part 1: Process Isolation
 Docker uses Linux namespaces and cgroups to implement containers. The namespaces limit what a process can see and interact with while cgroups limits resource usage so that the host or other containers do not hog resources. Here I created a new namespace on my linux machine. When I check processes are running, this is all I see:
+
 <img width="510" height="93" alt="image" src="https://github.com/user-attachments/assets/22b388bb-36de-4ac1-9149-947283ff0801" />
 
 
