@@ -1,4 +1,7 @@
 # An Investigation into the World of Containers
+
+<img width="1549" height="912" alt="image" src="https://github.com/user-attachments/assets/847658f7-2df6-4dd3-8aa9-38790bbb2fdc" />
+
 ---
 ## Introduction
 In the modern software development, containers are crucial in deploying, scaling, and managing software. These containers provide environment level isolation which means that the processes, network settings, and file systems are isolated from the host kernel and other containers. However, like many technologies, containers are an abstraction and our assumptions about what is happening do not always match what is actually happening under the hood. Many vulnerabilities are found by exploiting these assumptions and that is what I will be investigating in this lab. This report will be split into two parts. The first part will explain how containers works under the hood and the second part will demonstrate how containers can be exploited/mismanaged.
@@ -23,7 +26,7 @@ To preserve environment level isolation each container must have their own file 
 
 ## Part 2: Assumptions About Containers and How They Can Be Exploited
 ---
-### Assumption #1: Network traffic from and forwarded by the host can be entrusted implicitly.
+### Assumption #1: Network traffic from and forwarded by the host can be trusted implicitly.
 
 ### How that assumption can be exploited
 
